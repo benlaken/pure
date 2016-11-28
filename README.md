@@ -1,8 +1,10 @@
-Pure
+Modified Pure theme
 ====
 
 [Collaborative blogging theme](http://purepelican.com) based on [Purecss](http:purecss.io) for [Pelican](http://docs.getpelican.com/) blogs.
 Theme is responsive.
+
+I have tweaked the html and css pages for my own site.
 
 ## PELICANCONF.PY
 
