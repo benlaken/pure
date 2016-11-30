@@ -1,3 +1,39 @@
 {% extends 'index.html' %}
 {% block title %}{{ tag|striptags }} tag // {{ super() }}{% endblock title %}
 {% block pagetitle %}Posts tagged '{{ tag }}'{% endblock pagetitle %}
+
+{% block content %}
+<div class="pure-g-r" id="layout">
+    {% include 'sidebar.html' %}
+    <div class="pure-u-1">
+      {% include 'tag_cloud.html' %}
+        <div class="content">
+            <h1 class="content-subhead"> Posts featuring {{ tag }}
+              <i class="fa fa-tags fa-lg"></i>
+            </h1>
+            <!-- Archive Style list -->
+              <!--<table style="width:100%">
+                {% for article in dates %}
+                    <tr class='spaceUnder'>
+                      <td><h5 class="archive-date">{{ article.date|strftime('%d %B %Y') }}</h5></td>
+                      <td><div class="archive-post"><a href="{{ article.url }}">{{ article.title }}</a></div></td>
+                    </tr>
+                {% endfor %}
+            </table>-->
+            <!-- Post info Style list -->
+            {% for article in articles_page.object_list %}
+                {% include 'post.html' %}
+                {% if MATH is defined and not MATH['auto_insert'] %}
+                    {% if page and page.mathjax or article and article.mathjax %}
+                        {% set mathjax = True %}
+                    {% endif %}
+                {% endif %}
+                {% if loop.last and mathjax is defined %}
+                    {{ MATHJAXSCRIPT }}
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% include 'footer.html' %}
+{% endblock %}
