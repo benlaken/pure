@@ -401,3 +401,17 @@ ul.tagcloud .list-group-item <span>.badge {
   color:grey;
   box-shadow:0;
 }
+
+.about-link {
+    margin-left: 15px;
+    margin-top: 0px;
+    line-height: 15px;
+    font-size: 80%;
+    text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    color: #fff;
+}
+
+tr.spaceUnder > td
+{
+  padding-bottom: 1em;
+}

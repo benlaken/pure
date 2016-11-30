@@ -12,7 +12,7 @@
             <h1 class="content-subhead">Archive</h1>
               <table style="width:100%">
                 {% for article in dates %}
-                    <tr>
+                    <tr class='spaceUnder'>
                       <td><h5 class="archive-date">{{ article.date|strftime('%d %B %Y') }}</h5></td>
                       <td><div class="archive-post"><a href="{{ article.url }}">{{ article.title }}</a></div></td>
                     </tr>

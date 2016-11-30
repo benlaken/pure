@@ -5,15 +5,16 @@
                 <hgroup>
                     <h1 class="brand-main"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
                     <p class="tagline">{{ TAGLINE }}</p>
-                {% for title, link in MENUITEMS %}
-                    <p class="links"><a href="{{ link }}">{{ title }}</a></p>
-                {% endfor %}
+                    <a href="{{SITEURL}}/about.html"><p class="about-link">About me</p></a>
+                    {% for title, link in MENUITEMS %}
+                      <p class="links"><a href="{{ link }}">{{ title }}</a></p>
+                    {% endfor %}
                     <p class="social">
-                {% for title, link in SOCIAL %}
+                      {% for title, link in SOCIAL %}
                         <a href="{{ link }}">
                             <i class="fa fa-{{ title }} fa-2x"></i>
                         </a>
-                {% endfor %}
+                      {% endfor %}
                     <p>
                 </hgroup>
             </header>
