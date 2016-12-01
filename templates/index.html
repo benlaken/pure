@@ -5,6 +5,13 @@
     <div class="pure-u-1">
         {% include 'tag_cloud.html' %}
         <div class="content">
+          <!--<div>
+            {% if DISPLAY_PAGES_ON_MENU -%}
+              {% for pg in PAGES %}
+                <li{% if pg == page %} class="active"{% endif %}><a href="{{ SITEURL }}/{{ pg.url }}">{{ pg.title }}</a></li>
+              {% endfor %}
+            {% endif %}
+          </div>-->
             <div class="posts">
                 {% include 'pagination.html' %}
                 {% for article in articles_page.object_list %}
