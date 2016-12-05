@@ -10,7 +10,9 @@
              <table>
                <tr>
                 <td>
-                  <img class="avatar" alt="Benjamin Laken" src="https://www.gravatar.com/avatar/69dcde5b90cca46e5111cd8c306d155d">
+                  {% if PROFILE_IMAGE_URL %}
+                      <img class="avatar" alt="{{ page.author }}" src="{{ PROFILE_IMAGE_URL }}">
+                  {% endif %}
                 </td>
                 <td style="padding:10px">
                  <h1 class="content-subhead">{{ page.title }}</h1>
