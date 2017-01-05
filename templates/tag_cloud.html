@@ -7,7 +7,7 @@
     </h4>
     {% for tag in tag_cloud %}
         <li class="tag-{{ tag.1 }} tag-style">
-            <a href="{{ SITEURL }}/{{ tag.0.url }}">
+            <a class="select_item" href="{{ SITEURL }}/{{ tag.0.url }}">
             {{ tag.0 }}
                 {% if TAG_CLOUD_BADGE %}
                     <span class="badge">{{ tag.3 }} &middot; </span>

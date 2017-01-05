@@ -6,12 +6,13 @@
 
 a {
     text-decoration: none;
-    color: rgb(142, 142, 214);
+    color: black;
 }
-a:hover,
-a:focus {
-    text-decoration: underline;
-}
+
+//a:hover,
+//a:focus {
+//    text-decoration: underline;
+//}
 
 
 .comments {
@@ -414,3 +415,13 @@ tr.spaceUnder > td
 {
   padding-bottom: 1em;
 }
+
+.hover_select {
+	    color:#bf80ff;
+	}
+
+.select_item {}
+
+.post-category_select {
+      background:#bf80ff;
+  }

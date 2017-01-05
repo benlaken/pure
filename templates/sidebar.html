@@ -3,16 +3,16 @@
         <div class="cover-body">
             <header class="header">
                 <hgroup>
-                    <h1 class="brand-main"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
+                    <h1 class="brand-main select_item"><a href="{{ SITEURL }}">{{ SITENAME }}</a></h1>
                     <p class="tagline">{{ TAGLINE }}</p>
-                    <a href="{{SITEURL}}/pages/about-me.html"><p class="about-link">About me</p></a>
+                    <a href="{{SITEURL}}/pages/about-me.html"><p class="about-link select_item">About me</p></a>
                     {% for title, link in MENUITEMS %}
                       <p class="links"><a href="{{ link }}">{{ title }}</a></p>
                     {% endfor %}
                     <p class="social">
                       {% for title, link in SOCIAL %}
                         <a href="{{ link }}">
-                            <i class="fa fa-{{ title }} fa-2x"></i>
+                            <i class="fa fa-{{ title }} fa-2x select_item"></i>
                         </a>
                       {% endfor %}
                     <p>
